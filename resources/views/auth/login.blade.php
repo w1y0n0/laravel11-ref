@@ -3,7 +3,7 @@
 
 <head>
     <script type="text/javascript" src="{{ asset('assets/ca61087a/jquery.min.js') }}"></script>
-    <title>Aplikasi Berbasis Web</title>
+    <title>Sistem Informasi SPPD - Politeknik Negeri Cilacap</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- <meta name="author" content="Rizal Faizurohman"> --}}
@@ -92,7 +92,7 @@
                     <img src="{{ asset('images/pnc.svg') }}" style="width: 75px;">
                     <span class="login100-form-title-1"
                         style="text-transform: none; text-shadow: 2px 2px 1px rgba(0,0,0,0.6); margin-top: 10px; font-size: 16px; line-height: 150%;">
-                        Aplikasi Berbasis Web
+                        Surat Perintah Perjalanan Dinas
                         <br>
                         Politeknik Negeri Cilacap
                     </span>
@@ -100,9 +100,6 @@
 
                 <form class="login100-form validate-form" onsubmit="loading_start()" id="login-form" action="/home"
                     method="get">
-                    <input type="hidden"
-                        value="aFpub2dUbjNHdH5FWmpQZndhUmE5dmdIbll1RlBkQVb9ZyaHBKUa8Z17MELTBOaNCX3LyXm-kG0v7rGaDHPi3w=="
-                        name="YII_CSRF_TOKEN" />
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
                         <span class="label-input100">Username</span>
                         <input placeholder="Masukkan Username" class="input100" required="required"
