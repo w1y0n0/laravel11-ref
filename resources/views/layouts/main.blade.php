@@ -123,7 +123,7 @@
         /*]]>*/
     </style>
     <script type="text/javascript" src="{{ asset('/') }}assets/ca61087a/jquery.min.js"></script>
-    <title>Aplikasi Berbasis Web</title>
+    <title>Sistem Informasi SPPD - Politeknik Negeri Cilacap</title>
 
     <link href="{{ asset('/') }}themes/sb_admin/src/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
         type="text/css">

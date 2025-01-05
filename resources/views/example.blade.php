@@ -10,9 +10,7 @@
 
                             <form autocomplete="off" class="form-inline" id="pilih-posisi-terpilih-form"
                                 action="{{ asset('/') }}pegawai/site/save_posisi_terpilih.jsp" method="post">
-                                <input type="hidden"
-                                    value="bXVVVmpDZ183SzlsSDkxemtEV3l2enF5cF9rajZsM3FFIi4HAeNgSdvw6sAdcw1hLmj_ArOQEcsiRx4u2liiPg=="
-                                    name="YII_CSRF_TOKEN" />
+                                
                                 <select id="pilih_posisi_tahun" class="form-control form-control-sm flat mb-1 mr-sm-2"
                                     required="required" name="posisiTerpilih[tahun]">
                                     <option value="">- Pilih Tahun -</option>
@@ -83,9 +81,9 @@
                                 </div>
                                 <div class="index__user-detail mt-4">
                                     <small>
-                                        <b>USER</b>
+                                        <b>{{ auth()->user()->name }}</b>
                                         <br>
-                                        user1 <br>
+                                        197107062021211008 <br>
                                         Pustakawan Terampil <br>
                                         Politeknik Negeri Cilacap </small>
                                 </div>

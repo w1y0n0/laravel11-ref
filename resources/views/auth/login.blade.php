@@ -98,19 +98,20 @@
                     </span>
                 </div>
 
-                <form class="login100-form validate-form" onsubmit="loading_start()" id="login-form" action="/home"
-                    method="get">
+                <form class="login100-form validate-form" onsubmit="loading_start()" id="login-form"
+                    action="{{ route('login') }}" method="post">
+                    @csrf
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
                         <span class="label-input100">Username</span>
-                        <input placeholder="Masukkan Username" class="input100" required="required"
-                            name="LoginForm[username]" id="LoginForm_username" type="text" />
+                        <input placeholder="Masukkan Username" class="input100" required="required" name="username"
+                            id="username" type="text" value="{{ old('username') }}" />
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
                         <span class="label-input100">Password</span>
                         <input placeholder=" Masukkan Password" class="input100 togglePass" required="required"
-                            name="LoginForm[password]" id="LoginForm_password" type="password" />
+                            name="password" id="password" type="password" value="{{ old('password') }}" />
                         <span class="focus-input100"></span>
                     </div>
 
@@ -121,6 +122,15 @@
                             <label class="label-checkbox100" for="ckb1">Tampilkan Password</label>
                         </div>
                     </div>
+                    
+                    @error('error')
+                        <div class="flat"
+                            style="background-color: pink; padding: 10px 15px; margin-left: 0; margin-bottom: 10px; width: 100%; font-size: 12px;">
+                            <ul>
+                                <li>{{ $message }}</li>
+                            </ul>
+                        </div>
+                    @enderror
 
                     <div class="container-login100-form-btn">
                         <button type="submit" class="login100-form-btn flat mr-2 login-button">

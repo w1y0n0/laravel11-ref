@@ -6,7 +6,7 @@
             <img src="{{ asset('/') }}images/logo.png" style="width: 40px;">
         </div>
         <div class="sidebar-brand-text mx-3">
-            <small>Web Apps</small>
+            <small>SPPD PNC</small>
         </div>
     </a>
 
@@ -14,9 +14,9 @@
     <hr class="sidebar-divider my-0">
 
     <li class="nav-item active">
-        <a class="nav-link" href="{{ asset('/') }}site/index.jsp">
+        <a class="nav-link" href="{{ url('/dashboard') }}">
             <i class="fas fa-fw fa-stop-circle"></i>
-            <span>Beranda</span>
+            <span>Dashboard</span>
         </a>
     </li>
 
@@ -24,21 +24,19 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseZero"
             aria-expanded="false" aria-controls="collapseZero">
             <i class="fas fa-fw fa-stop-circle"></i>
-            <span>Data Pegawai</span>
+            <span>Data Master</span>
         </a>
         <div id="collapseZero" class="collapse " aria-labelledby="headingZero" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item " href="{{ asset('/') }}pegawai/profil/index.jsp">Data Pribadi</a>
-                <a class="collapse-item " href="{{ asset('/') }}pegawai/profil/tims.jsp">Tim Kerja</a>
-                <a class="collapse-item " href="{{ asset('/') }}pegawai/ppk/index.jsp">Pejabat Penilai
-                    Kinerja</a>
-                <a class="collapse-item " href="{{ asset('/') }}pegawai/rerata/index.jsp">Pejabat Rerata
-                    Bulanan</a>
+                <a class="collapse-item " href="">Data Unit Kerja</a>
+                <a class="collapse-item " href="">Data Pegawai</a>
+                <a class="collapse-item " href="">Data Pimpinan</a>
+                <a class="collapse-item " href="">Data Kode Surat</a>
             </div>
         </div>
     </li>
 
-    <li class="nav-item ">
+    {{-- <li class="nav-item ">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
             aria-expanded="false" aria-controls="collapseOne">
             <i class="fas fa-fw fa-stop-circle"></i>
@@ -117,10 +115,10 @@
             <i class="fas fa-fw fa-stop-circle"></i>
             <span>Refresh Session</span>
         </a>
-    </li>
+    </li> --}}
 
     <li class="nav-item">
-        <a class="nav-link" href="{{ asset('/') }}site/logout.jsp">
+        <a class="nav-link" href="{{ route('logout') }}">
             <i class="fas fa-fw fa-stop-circle"></i>
             <span>Logout</span>
         </a>
