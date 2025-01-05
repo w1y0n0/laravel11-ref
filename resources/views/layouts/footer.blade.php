@@ -2,7 +2,7 @@
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
             <span>
-                Aplikasi Berbasis Web @2025 - Politeknik Negeri Cilacap
+                Sistem Informasi SPPD @2025 - Politeknik Negeri Cilacap
             </span>
         </div>
     </div>

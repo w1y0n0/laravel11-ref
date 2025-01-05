@@ -85,6 +85,37 @@
             </div>
         </div>
 
+        <div class="card shadow mb-4">
+            {{-- <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Basic Card Example</h6>
+            </div> --}}
+            <div class="card-body">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-3">
+                        <img src="https://sppd.unkhair.ac.id/images/dashboard.png" class="img-fluid opacity-85"
+                            alt="images" loading="lazy">
+                    </div>
+                    <div class="col-lg-9 px-xl-5">
+                        <h4 class="mb-2">
+                            Selamat datang <b>{{ auth()->user()->name }}</b> di Sistem Informasi SPPD Politeknik Negeri Cilacap
+                        </h4>
+                        <p class="lead-dashboard mb-4">
+                            Sistem Informasi SPPD
+                            merupakan sistem informasi yang dirancang khusus untuk mengelola data
+                            <span title="Surat Perintah Perjalanan Dinas">SPPD</span>.
+                            Sehingga dapat menyediakan layanan yang lebih efektif dan efisien.
+                        </p>
+                        <div class="d-grid gap-3 d-md-flex justify-content-md-start">
+                            <a href="{{ route('logout') }}" class="btn btn-danger px-4"><i class="fa fa-power-off"></i> Logout</a>
+                            <button type="button" class="btn btn-primary ml-1">
+                                <i class="fa fa-user"></i> Edit Akun
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Content Row -->
         {{-- <div class="row">
 

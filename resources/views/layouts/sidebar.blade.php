@@ -1,9 +1,9 @@
 <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ asset('/') }}site/index.jsp">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
         {{-- <div class="sidebar-brand-icon rotate-n-15"> --}}
         <div class="sidebar-brand-icon">
             {{-- <i class="fas fa-laugh-wink"></i> --}}
-            <img src="{{ asset('/') }}images/logo.png" style="width: 40px;">
+            <img src="{{ asset('images/logo.png') }}" style="width: 40px;">
         </div>
         <div class="sidebar-brand-text mx-3">
             <small>SPPD PNC</small>
@@ -13,22 +13,22 @@
 
     <hr class="sidebar-divider my-0">
 
-    <li class="nav-item active">
-        <a class="nav-link" href="{{ url('/dashboard') }}">
+    <li class="nav-item {{ routeIs('dashboard') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('dashboard') }}">
             <i class="fas fa-fw fa-stop-circle"></i>
             <span>Dashboard</span>
         </a>
     </li>
 
-    <li class="nav-item ">
+    <li class="nav-item {{ routeIs(['unit-kerja.index']) ? 'active' : '' }}">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseZero"
             aria-expanded="false" aria-controls="collapseZero">
             <i class="fas fa-fw fa-stop-circle"></i>
             <span>Data Master</span>
         </a>
-        <div id="collapseZero" class="collapse " aria-labelledby="headingZero" data-parent="#accordionSidebar">
+        <div id="collapseZero" class="collapse {{ routeIs(['unit-kerja.index']) ? 'show' : '' }}" aria-labelledby="headingZero" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item " href="">Data Unit Kerja</a>
+                <a class="collapse-item {{ routeIs(['unit-kerja.index']) ? 'active' : '' }}" href="{{ route('unit-kerja.index') }}">Data Unit Kerja</a>
                 <a class="collapse-item " href="">Data Pegawai</a>
                 <a class="collapse-item " href="">Data Pimpinan</a>
                 <a class="collapse-item " href="">Data Kode Surat</a>

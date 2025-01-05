@@ -28,6 +28,16 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('themes/sb_admin/src_login/css/util.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('themes/sb_admin/src_login/css/main.css') }}">
     <!--===============================================================================================-->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        body {
+            font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+    </style>
+
+    <!-- Custom CSS -->
     <style>
         .flat {
             border-radius: 0;
@@ -91,7 +101,7 @@
                     style="background-image: url('{{ asset('themes/sb_admin/src_login/images/bg-02.jpg') }}'); padding-top: 30px; padding-bottom: 20px;">
                     <img src="{{ asset('images/pnc.svg') }}" style="width: 75px;">
                     <span class="login100-form-title-1"
-                        style="text-transform: none; text-shadow: 2px 2px 1px rgba(0,0,0,0.6); margin-top: 10px; font-size: 16px; line-height: 150%;">
+                        style="text-transform: none; text-shadow: 2px 2px 1px rgba(0,0,0,0.6); margin-top: 10px; font-size: 18px; font-weight: 700; line-height: 150%;">
                         Surat Perintah Perjalanan Dinas
                         <br>
                         Politeknik Negeri Cilacap
@@ -102,16 +112,16 @@
                     action="{{ route('login') }}" method="post">
                     @csrf
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-                        <span class="label-input100">Username</span>
+                        <span class="label-input100" style="font-size: 16px; font-weight: 500">Username</span>
                         <input placeholder="Masukkan Username" class="input100" required="required" name="username"
-                            id="username" type="text" value="{{ old('username') }}" />
+                            id="username" type="text" value="{{ old('username') }}" style="font-size: 16px;"/>
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
-                        <span class="label-input100">Password</span>
+                        <span class="label-input100" style="font-size: 16px; font-weight: 500">Password</span>
                         <input placeholder=" Masukkan Password" class="input100 togglePass" required="required"
-                            name="password" id="password" type="password" value="{{ old('password') }}" />
+                            name="password" id="password" type="password" value="{{ old('password') }}" style="font-size: 16px;"/>
                         <span class="focus-input100"></span>
                     </div>
 
@@ -119,13 +129,13 @@
                         <div class="contact100-form-checkbox">
                             <input class="input-checkbox100" id="ckb1" type="checkbox"
                                 onchange="$('.togglePass').togglePassword();">
-                            <label class="label-checkbox100" for="ckb1">Tampilkan Password</label>
+                            <label class="label-checkbox100" style="font-size: 14px;" for="ckb1">Tampilkan Password</label>
                         </div>
                     </div>
-                    
+
                     @error('error')
                         <div class="flat"
-                            style="background-color: pink; padding: 10px 15px; margin-left: 0; margin-bottom: 10px; width: 100%; font-size: 12px;">
+                            style="background-color: pink; padding: 10px 15px; margin-left: 0; margin-bottom: 10px; width: 100%; font-size: 14px;">
                             <ul>
                                 <li>{{ $message }}</li>
                             </ul>
