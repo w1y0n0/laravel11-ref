@@ -79,7 +79,8 @@
     <link href="{{ asset('/') }}themes/sb_admin/src/vendor/datatables/dataTables.bootstrap4.min.css"
         rel="stylesheet">
     <!-- SweetAlert2 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="{{ asset('themes/sb_admin/plugins/sweetalert2/sweetalert2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('themes/sb_admin/plugins/sweetalert2/sweetalert-custom.css') }}">
 
     <!-- Custom CSS dari tiap view (jika ada) -->
     @stack('css')
@@ -147,7 +148,7 @@
     <!-- Validator -->
     <script src="{{ asset('js/validator.min.js') }}"></script>
      <!-- SweetAlert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="{{ asset('themes/sb_admin/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
 
     <script type="text/javascript">
         // showTime();

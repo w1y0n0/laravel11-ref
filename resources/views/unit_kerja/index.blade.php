@@ -76,11 +76,16 @@
                     $.post($('#modal-form form').attr('action'), $('#modal-form form').serialize())
                         .done((response) => {
                             $('#modal-form').modal('hide');
-                            Swal.fire(
-                                'Tersimpan!',
-                                response.message,
-                                'success'
-                            );
+                            Swal.fire({
+                                title: 'Tersimpan!',
+                                text: response.message,
+                                icon: 'success',
+                                customClass: {
+                                    popup: 'my-custom-popup',
+                                    confirmButton: 'my-custom-button',
+                                },
+                                confirmButtonText: 'OK',
+                            })
                             table.ajax.reload();
                         })
                         .fail((errors) => {
@@ -135,7 +140,11 @@
                 confirmButtonColor: '#d33',
                 cancelButtonColor: '#3085d6',
                 confirmButtonText: 'Ya, Hapus!',
-                cancelButtonText: 'Batal'
+                cancelButtonText: 'Batal',
+                customClass: {
+                    popup: 'my-custom-popup',
+                    confirmButton: 'my-custom-button',
+                },
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.post(url, { // Kirim data ke URL pada parameter
@@ -144,20 +153,30 @@
                                 'content') // Isi value dari input [_token] dengan token CSRF
                         })
                         .done((response) => {
-                            Swal.fire(
-                                'Terhapus!',
-                                response.message,
-                                'success'
-                            );
+                            Swal.fire({
+                                title: 'Terhapus!',
+                                text: response.message,
+                                icon: 'success',
+                                customClass: {
+                                    popup: 'my-custom-popup',
+                                    confirmButton: 'my-custom-button',
+                                },
+                                confirmButtonText: 'OK',
+                            })
                             table.ajax.reload(); // Reload data pada DataTable
                         })
                         .fail((errors) => {
                             console.log(errors);
-                            Swal.fire(
-                                'Gagal!',
-                                'Tidak dapat menghapus data.',
-                                'error'
-                            );
+                            Swal.fire({
+                                title: 'Gagal!',
+                                text: 'Tidak dapat menghapus data.',
+                                icon: 'error',
+                                customClass: {
+                                    popup: 'my-custom-popup',
+                                    confirmButton: 'my-custom-button',
+                                },
+                                confirmButtonText: 'OK',
+                            })
                         });
                 }
             });

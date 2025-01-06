@@ -1,0 +1,15 @@
+/* Kustomisasi ukuran popup */
+.my-custom-popup {
+    width: 300px !important;
+    /* Lebar popup */
+    font-size: 12px !important;
+    /* Ukuran font */
+}
+
+/* Kustomisasi tombol */
+.my-custom-button {
+    font-size: 10px !important;
+    /* Ukuran font tombol */
+    padding: 6px 10px !important;
+    /* Padding tombol */
+}
